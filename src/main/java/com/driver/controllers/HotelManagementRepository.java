@@ -124,7 +124,7 @@ public class HotelManagementRepository {
         Hotel hotel= HotelDB.get(hotelName);
         List<Facility> facalities= hotel.getFacilities();
         for(int i=0;i<newFacilities.size();i++){
-            if (facalities.contains(newFacilities.get(i))){
+            if (!facalities.contains(newFacilities.get(i))){
                 facalities.add(newFacilities.get(i));
             }
         }
